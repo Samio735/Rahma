@@ -1,0 +1,96 @@
+.title2{
+    font-size: 5rem;
+    margin-top: 0.7em;
+}
+
+.signinform{
+    height: 40vh;
+    width: 80vw;
+position: absolute;
+top: 36vh;
+right:10%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+.name{
+max-width:9em ;
+width: 60vw;
+height: 7.5vh;
+border-radius: 105px;
+border: 0px;
+padding: 0vh 3vw;
+font-family: inherit;
+font-size:2em;
+margin: 1vh 0px;
+
+}
+
+
+.button_submit{
+    border: 0px;
+  border-radius: 9.9vw;
+  background-color: #FFD365;
+  margin-top: 1em;
+  max-width: 28em;
+  width: 60vw;
+  height: 5.7em;
+  align-items: center;
+  justify-content: center;
+}
+ .button_submit p{
+     padding: 0vh;
+     margin: 0.5em ;
+    font-size: 1.7rem;
+    font-weight: bold;
+    overflow: hidden;
+  
+    
+ }
+
+ .other
+{
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1em;
+    margin-top: .7em;
+}
+ u{
+
+     color:#f6f8ff;
+     font-size: 1.4em;
+    
+ }
+ .no{
+    font-size: 1.5rem;
+ }
+ .mdp{
+     font-size: 1.2rem;
+     padding-top: 1em;
+ }
+
+ .hero_img2{
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+   width: 30vw;
+   z-index: -1;
+   animation: groww 2s forwards;
+ }
+ @media only screen and (min-width:1010px){
+.signinform{
+    right: 15vw;
+    width: 30vw;
+}
+.hero_img2{
+    position: absolute;
+    bottom: 5vh;
+    left: 15vw;
+   width: 60vh;
+   z-index: -1;
+  }
+}

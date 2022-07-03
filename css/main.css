@@ -1,0 +1,385 @@
+:root {
+    --mywhite: #fff6f8;
+    --mygreen: #00C897;
+    --myorange: #FFD365;
+    --mydarkgreen: #019267;
+  }
+  
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap');
+ body{
+    font-family: 'Catamaran', sans-serif;
+    margin: 1.5em;
+    background-color: #00C897;
+ }
+
+ .hero_img{
+   position: absolute;
+   bottom: 5vh;
+   right: 3vw;
+  background: url(svg/home_1.svg);
+  width: 40vw;
+  z-index: -1;
+  transition: width 1s forward ease-in-out;
+ }
+ .hero_img:{
+   width:42vw;
+ }
+ .logo{
+   color: var(--mywhite);
+   padding: none;
+   font-size: 1.5rem;
+   font-weight: bold;
+   transition: color 0.1s ease-in-out;
+ }
+ .logo:hover{
+   color: #ffffff;
+ }
+
+ .grass{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+ background: url(svg/clean.svg);
+ width: 150vw;
+ z-index: -10;
+}
+
+.open{
+  stroke: var(--mywhite);
+  width: 2.7em;
+  cursor: pointer;
+  color: #fff6f8;   
+  transition: 0.4s ease-in-out;
+}
+.open:hover{
+  color: #ffffff;
+  width: 3em;
+}
+
+.close{
+  display: none;
+  stroke: var(--mywhite);
+  width: 2.7em;
+  cursor: pointer;
+  color: #fff6f8;
+  z-index: 1000;
+}
+.account{
+  display: flex;
+  justify-content: center;
+}
+.signup{
+  border: 0px;
+  border-radius: 9.9vw;
+  background-color: #FFD365;
+  margin-top: 0.5em;
+  margin-left: 2em;
+  width: 8em;
+  height: 3.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-in;
+
+}
+.signup:hover{
+  width: 9em;
+}
+.signup p:hover{
+  color: #ffffff;
+}
+.account p {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.signin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 7px;
+  border-color: #FFD365;
+  border-style: solid;
+  border-radius: 9.9vw;
+  background-color: #00C897;
+  margin-top: 0.5em;
+  margin-left: 2em;
+  width: 8em;
+  height: 3.8em;
+  transition: 0.4s ease-in;
+
+}
+.signin:hover{
+  width: 9em;
+}
+.signin p {
+  color: #FFD365;
+}
+header{
+  margin-top: -2vh;
+  margin-left: 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: var(--mydarkgreen);
+  height: 100%;
+  width: 60%;
+  padding: none;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform .5s ease-in-out;
+}
+.open-nav
+nav ul{
+  padding: none;
+  margin-left: -2.5em ;
+  margin-top: 6em;
+}
+
+nav li {
+  list-style-type:none;
+  padding: .2em 2em;
+
+}
+
+nav li:hover{
+  background-color: #00C897;
+}
+
+a{
+  text-decoration: none;
+
+}
+
+h1{
+  font-size: 5rem;
+  color: #fff6f8;
+}
+p{
+  font-size: 2rem;
+  color: #fff6f8;
+}
+
+.hero{
+  margin-top: -10vh;
+  height: 80vh;
+}
+.info {
+  margin-left: 3vw;
+    width: 26em;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.info p{
+  margin-top: -2em;
+}
+
+.button1{
+  border: 0px;
+  border-radius: 9.9vw;
+  background-color: #FFD365;
+  margin-top: 2vh;
+  width: 28em;
+  height: 5em;
+  transition: width 0.4s ease-in;
+  
+}
+.button1:hover{
+  width: 29em;
+}
+.button1 p{
+  margin-top: 0.5em;
+  font-weight: bold;
+  transition: color 0.1s ease-in-out;
+}
+.button1 p:hover{
+  color: #ffffff;
+}
+.cta{
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3vh;
+}
+.pro{
+  font-size: 1.5rem;
+  margin-left: 4vw;
+  transition: color 0.1s ease-in-out;
+}
+.pro:hover{
+  color: #ffffff;
+}
+u{
+  margin-top: 4em;
+
+}
+.bg{
+  background-color: var(--mygreen);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1000;
+}
+  
+
+
+@media only screen and (min-width:1010px){
+  body{
+    font-family: 'Catamaran', sans-serif;
+    margin: 1.5em 5em;
+    background-color: #00C897;
+ }
+ .info{
+   width: 30em;
+ }
+  .open{
+    display: none;
+  }
+  
+  .close{
+    display: none;
+
+  }
+  
+  nav {
+
+    transform: translateX(0);
+    position: unset;
+    background: none;
+    height: auto;
+    width: auto;
+    padding: none;
+    z-index:0;
+     transition: none;
+
+  }
+  nav ul{
+    overflow: hid;
+    position: static;
+    margin-left: 5em;
+    display: flex;
+    flex-shrink:1 ;
+    justify-content: center;
+    align-items: center;
+      padding: none;
+    margin-left:0 ;
+    margin-top: 0em;
+  
+  }
+  
+  nav li {
+text-overflow: ellipsis;
+    font-size: 0.5rem;
+    list-style-type:none;
+    padding-top:2em;
+    min-width: 20px;
+  }
+
+  .navbartitle{
+    font-size: 1.5rem;
+  }
+  
+  header{
+    display: flex;
+    justify-content: left;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .grass{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+   background: url(svg/clean.svg);
+   width: 100vw;
+   z-index: -10;
+  }
+  
+ .hero_img{
+  position: absolute;
+  bottom: 5vh;
+  right: 15vw;
+ background: url(svg/home_1.svg);
+ width: 50vh;
+ z-index: -1;
+}
+.info {
+  margin-left: 3vw;
+    width: 34em;
+  height: 45vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between ;
+}
+.info p{
+  padding-top: 0.2em;
+  font-size: 2.5rem;
+}
+.cta{
+  height: 35vh;
+  gap: 10vh;
+}
+.button1{
+  border: 0px;
+  border-radius: 9.9vw;
+  background-color: #FFD365;
+  margin-top: 3em;
+  margin-left: 2em;
+  width: 43em;
+  height: 5.6em;
+  transition: 0.5s ease-in;
+}
+.button1 p{
+  margin-top: 0em;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: color 0.1s ease-in-out;
+}
+.button1 p:hover{
+  color: #ffffff;
+}
+.button1:hover{
+width: 44em;}
+.pro u{
+  margin-top: 10em;
+  font-size: 1.7rem;
+  margin-left: 2.7em;
+}
+.signup{
+  border: 0px;
+  border-radius: 9.9vw;
+  background-color: #FFD365;
+  margin-top: 1em;
+  width: 10em;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.signin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 7px;
+  border-color: #FFD365;
+  border-style: solid;
+  border-radius: 9.9vw;
+  background-color: #00C897;
+  margin-top: 1em;
+  margin-left: 2em;
+  width: 10em;
+  height: 5em;
+  tr
+}
+}
