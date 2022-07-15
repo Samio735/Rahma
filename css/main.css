@@ -10,6 +10,7 @@
     font-family: 'Catamaran', sans-serif;
     margin: 1.5em;
     background-color: #00C897;
+    
  }
 
  .hero_img{
@@ -26,8 +27,10 @@
  }
  .logo{
    color: var(--mywhite);
+   margin-top: clamp(20px,3em);
+
    padding: none;
-   font-size: 1.5rem;
+   font-size: clamp(50px,1.5em,100px);
    font-weight: bold;
    transition: color 0.1s ease-in-out;
  }
@@ -66,7 +69,6 @@
 }
 .account{
   display: flex;
-  justify-content: center;
 }
 .signup{
   border: 0px;
@@ -74,8 +76,8 @@
   background-color: #FFD365;
   margin-top: 0.5em;
   margin-left: 2em;
-  width: 8em;
-  height: 3.5em;
+  width: 17em;
+  height: clamp(100px,3.8em,1000px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,13 +85,13 @@
 
 }
 .signup:hover{
-  width: 9em;
+  width: 15em;
 }
 .signup p:hover{
   color: #ffffff;
 }
 .account p {
-  font-size: 1.5rem;
+
   font-weight: bold;
 
 }
@@ -105,8 +107,9 @@
   background-color: #00C897;
   margin-top: 0.5em;
   margin-left: 2em;
-  width: 8em;
-  height: 3.8em;
+  margin-right: 5em;
+  width: 17em;
+  height: clamp(100px,3.8em,1000px);
   transition: 0.4s ease-in;
 
 }
@@ -159,11 +162,11 @@ a{
 }
 
 h1{
-  font-size: 5rem;
+  font-size: clamp(120px,5rem,300px);
   color: #fff6f8;
 }
 p{
-  font-size: 2rem;
+  font-size:clamp(50px,2rem,100px);
   color: #fff6f8;
 }
 
@@ -172,6 +175,7 @@ p{
   height: 80vh;
 }
 .info {
+  margin-top: 10em;
   margin-left: 3vw;
     width: 26em;
   height: 80vh;
@@ -188,8 +192,8 @@ p{
   border-radius: 9.9vw;
   background-color: #FFD365;
   margin-top: 2vh;
-  width: 28em;
-  height: 5em;
+  width: clamp(600px,28em,1200px);
+  height: clamp(120px,5em,500px);
   transition: width 0.4s ease-in;
   
 }
@@ -212,7 +216,7 @@ p{
   gap: 3vh;
 }
 .pro{
-  font-size: 1.5rem;
+  font-size: clamp(40px,1rem,100px);
   margin-left: 4vw;
   transition: color 0.1s ease-in-out;
 }
@@ -313,9 +317,9 @@ text-overflow: ellipsis;
 }
 .info {
   margin-left: 3vw;
-    width: 34em;
+  width: 500px;
   height: 45vh;
-  
+  margin-right: 0px;
   display: flex;
   flex-direction: column;
   justify-content:space-between ;
@@ -359,7 +363,7 @@ width: 44em;}
   border-radius: 9.9vw;
   background-color: #FFD365;
   margin-top: 1em;
-  width: 10em;
+  width: 17em;
   height: 5em;
   display: flex;
   justify-content: center;
@@ -378,7 +382,7 @@ width: 44em;}
   background-color: #00C897;
   margin-top: 1em;
   margin-left: 2em;
-  width: 10em;
+  width: 17em;
   height: 5em;
   tr
 }
