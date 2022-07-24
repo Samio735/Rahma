@@ -171,11 +171,11 @@ p{
 }
 
 .hero{
-  margin-top: -10vh;
+  margin-top: clamp(10px,-10vh,100px);
   height: 80vh;
 }
 .info {
-  margin-top: 10em;
+
   margin-left: 3vw;
     width: 26em;
   height: 80vh;
@@ -235,8 +235,7 @@ u{
 }
   
 
-
-@media only screen and (min-width:1010px){
+@media only screen and (min-width:1440px){
   body{
     font-family: 'Catamaran', sans-serif;
     margin: 1.5em 5em;
@@ -292,12 +291,7 @@ text-overflow: ellipsis;
     font-size: 1.5rem;
   }
   
-  header{
-    display: flex;
-    justify-content: left;
-    justify-content: space-between;
-    align-items: center;
-  }
+ 
   .grass{
     position: absolute;
     bottom: 0;
@@ -306,58 +300,7 @@ text-overflow: ellipsis;
    width: 100vw;
    z-index: -10;
   }
-  
- .hero_img{
-  position: absolute;
-  bottom: 5vh;
-  right: 15vw;
- background: url(svg/home_1.svg);
- width: 50vh;
- z-index: -1;
-}
-.info {
-  margin-left: 3vw;
-  width: 500px;
-  height: 45vh;
-  margin-right: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content:space-between ;
-}
-.info p{
-  padding-top: 0.2em;
-  font-size: 2.5rem;
-}
-.cta{
-  height: 35vh;
-  gap: 10vh;
-}
-.button1{
-  border: 0px;
-  border-radius: 9.9vw;
-  background-color: #FFD365;
-  margin-top: 3em;
-  margin-left: 2em;
-  width: 43em;
-  height: 5.6em;
-  transition: 0.5s ease-in;
-}
-.button1 p{
-  margin-top: 0em;
-  font-size: 3rem;
-  font-weight: bold;
-  transition: color 0.1s ease-in-out;
-}
-.button1 p:hover{
-  color: #ffffff;
-}
-.button1:hover{
-width: 44em;}
-.pro u{
-  margin-top: 10em;
-  font-size: 1.7rem;
-  margin-left: 2.7em;
-}
+
 .signup{
   border: 0px;
   border-radius: 9.9vw;
