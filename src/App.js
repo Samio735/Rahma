@@ -9,8 +9,12 @@ import Footer from "./footer";
 import MainPage from "./mainPage";
 import Register from "./Register";
 import List from "./List";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.title = "Rahma"; // Set the desired title here
+  }, []);
   return (
     <div className="app">
       <BrowserRouter>
