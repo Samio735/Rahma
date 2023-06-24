@@ -1,46 +1,6 @@
-import { useEffect, useState } from "react";
 import Navbar from "./navbar";
 
-import { createClient } from "@supabase/supabase-js";
-import { Navigate, redirect, useNavigate } from "react-router-dom";
-
-function Register() {
-  const supabaseUrl = "https://udhxwltnxaevrilejelv.supabase.co";
-  const supabaseKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkaHh3bHRueGFldnJpbGVqZWx2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODczODYwNDIsImV4cCI6MjAwMjk2MjA0Mn0.wZsL4osTBpfQia2_QvHLpgQH0uBCXXdlKYYGpL6f7mM";
-  const supabase = createClient(supabaseUrl, supabaseKey);
-  const Navigate = useNavigate();
-  async function getData() {
-    let { data: Rahimins, error } = await supabase.from("Rahimins").select("*");
-
-    if (error) console.log("error", error);
-    else console.log("Rahimins", Rahimins);
-
-    return Rahimins;
-  }
-
-  async function insertData(name, phoneNumber) {
-    const { data, error } = await supabase
-      .from("Rahimins")
-      .insert([{ name: name, phone_number: phoneNumber }]);
-
-    if (error) {
-      console.log("Error inserting data:", error);
-      Navigate("/error");
-    } else {
-      console.log("Data inserted successfully");
-      Navigate("/success");
-    }
-  }
-  useEffect(() => {
-    getData().then((data) => console.log(data));
-  }, []);
-  function handleSubmit(e) {
-    e.preventDefault();
-    insertData(name, phone);
-  }
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+function Success() {
   return (
     <div className="text-white-text ">
       <Navbar />
@@ -324,39 +284,13 @@ function Register() {
           </clipPath>
         </defs>
       </svg>
-      <form
-        className="register__container grid max-w-sm mt-20 ms-[20vw] text-xl justify-items-end text-right "
-        onSubmit={handleSubmit}
-      >
+      <div className="register__container grid max-w-sm mt-20 ms-[20vw] text-xl justify-items-end text-right ">
         <h1 className="text-2xl mb-6">
-          قم بتسجيل معلوماتك لتكون جزءًا من مجتمعنا المتكامل.
+          تم تسجيل معلوماتك، سوف نقوم بالتحقق من هويتك لنضعك في لائحة الذباحين
         </h1>
-        <h1 className="mb-3">الإسم الكامل</h1>
-        <input
-          value={name}
-          type="text"
-          placeholder="الإسم الكامل"
-          className="register__input text-black max-w-[270px] mb-3 ps-[100px] py-3 rounded-full text-right pe-4 "
-          onChange={(e) => setName(e.target.value)}
-        />
-        <h1 className="mb-3">رقم الهاتف</h1>
-        <input
-          value={phone}
-          type="text"
-          placeholder="0782265437"
-          className="register__input text-black max-w-[270px] mb-3 ps-[100px] py-3 rounded-full text-right pe-4 "
-          onChange={(e) => {
-            setPhone(e.target.value);
-            return redirect("/Success");
-          }}
-        />
-
-        <button className="bg-main-yellow mb-2 text-green-400 text-2xl font-bold py-3 mt-5 px-20 rounded-full ">
-          سجل الأن
-        </button>
-      </form>
+      </div>
     </div>
   );
 }
 
-export default Register;
+export default Success;

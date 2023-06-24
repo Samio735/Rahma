@@ -2,7 +2,7 @@ import Footer from "./footer";
 
 function EmptyListText() {
   return (
-    <div className="grid justify-center z-10 pb-[900px]  ">
+    <div className="grid justify-center  pb-[900px]  z-[-1] ">
       <h1 className="text-7xl text-center mt-[30px] lg:mt-[70px] mb-4 lg:mb-12 z-[2]">
         الذباحين المتوفرين
       </h1>
@@ -12,7 +12,7 @@ function EmptyListText() {
       </h1>
 
       <svg
-        className=" absolute top-60  sm:top40 md:top-0 w-full min-h-[80vh] z-[-1]"
+        className=" absolute top-60  sm:top40 md:top-0 w-full min-h-[80vh] z-[-10]"
         viewBox="0 0 1920 1624"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
