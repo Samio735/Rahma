@@ -2,7 +2,7 @@ import React from "react";
 
 const ThirdText = () => {
   return (
-    <div className="text-right lg:leading-relaxed max-w-xs lg:max-w-[600px]  lg:text-3xl z-10 me-[55vw]">
+    <div className="text-right lg:leading-relaxed max-w-xs  lg:max-w-[600px]  lg:text-3xl z-10 me-[55vw]">
       {/* div with 3 divs on top of each other aligned to right each div has to divs side to side from right to left */}
       <div className="flex flex-col">
         <div className="flex flex-row-reverse">
@@ -26,7 +26,7 @@ const ThirdText = () => {
               />
             </svg>
           </div>
-          <h2 className="text-2xl lg:text-7xl lg:me-5 lg:mb-10 font-bold mb-3 me-2  ">
+          <h2 className="text-lg lg:text-7xl lg:me-5 lg:mb-10 font-bold mb-3 me-2  ">
             إختر ولايتك
           </h2>
         </div>
@@ -51,7 +51,7 @@ const ThirdText = () => {
               />
             </svg>
           </div>
-          <h2 className="text-2xl lg:leading-relaxed lg:text-7xl lg:me-5 lg:mb-10 font-bold mb-3 me-2  ">
+          <h2 className="text-lg lg:leading-relaxed lg:text-7xl lg:me-5 lg:mb-10 font-bold mb-3 me-2  ">
             تصفح قائمة الذباحين
           </h2>
         </div>
@@ -76,7 +76,7 @@ const ThirdText = () => {
               />
             </svg>
           </div>
-          <h2 className="text-2xl lg:text-7xl lg:me-5 lg:mb-10 font-bold mb-3 me-2  ">
+          <h2 className="text-lg lg:text-7xl lg:me-5 lg:mb-10 font-bold mb-3 me-2  ">
             تواصل معهم
           </h2>
         </div>

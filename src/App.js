@@ -18,7 +18,7 @@ function App() {
     document.title = "Rahma"; // Set the desired title here
   }, []);
   return (
-    <div className="app">
+    <div className="app w-screen ">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />}></Route>

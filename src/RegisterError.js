@@ -287,7 +287,7 @@ function RegisterError() {
           </clipPath>
         </defs>
       </svg>
-      <div className="register__container grid max-w-sm mt-20 ms-[20vw] text-xl justify-items-end text-right ">
+      <div className="register__container grid lg:max-w-sm max-w-xs mt-20 lg:ms-[20vw] ms-4 text-xl justify-items-end text-right ">
         <h1 className="text-2xl mb-6">
           لقد حدث خظأ في تسجيل معلوماتك، يرجى إعادة المحاولة
         </h1>

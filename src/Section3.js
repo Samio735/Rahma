@@ -7,7 +7,7 @@ import ThirdText from "./ThirdText";
 const Section3 = () => {
   return (
     // div with full width and green background elements centered
-    <div className="w-full pb-[3vw] lg:pb-[0px] flex justify-center items-center p-5 relative -z-35 lg:justify-end ">
+    <div className="w-full pb-[0] lg:pb-[0px] flex justify-center items-center p-5 relative -z-35 lg:justify-end ">
       {/* div with 2 headings stacked on top of each other and aligned to the right */}
       <ThirdText />
       {/* container with text and background svg the svg's width must be the page width and the hieght must be complete */}

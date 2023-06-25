@@ -21,8 +21,8 @@ function Register() {
 
   async function insertData(name, phoneNumber) {
     const { data, error } = await supabase
-      .from("Rahimins")
-      .insert([{ name: name, phone_number: phoneNumber }]);
+      .from("Rahimouns")
+      .insert([{ name: name, phone: phoneNumber, wilaya: wilaya }]);
 
     if (error) {
       console.log("Error inserting data:", error);
@@ -38,9 +38,71 @@ function Register() {
   function handleSubmit(e) {
     e.preventDefault();
     insertData(name, phone);
+    console.log(name, phone, wilaya);
   }
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [wilaya, setWilaya] = useState("");
+  const wilayas = [
+    { name: "Adrar", id: 1 },
+    { name: "Chlef", id: 2 },
+    { name: "Laghouat", id: 3 },
+    { name: "Oum El Bouaghi", id: 4 },
+    { name: "Batna", id: 5 },
+    { name: "Béjaïa", id: 6 },
+    { name: "Biskra", id: 7 },
+    { name: "Béchar", id: 8 },
+    { name: "Blida", id: 9 },
+    { name: "Bouira", id: 10 },
+    { name: "Tamanrasset", id: 11 },
+    { name: "Tébessa", id: 12 },
+    { name: "Tlemcen", id: 13 },
+    { name: "Tiaret", id: 14 },
+    { name: "Tizi Ouzou", id: 15 },
+    { name: "Alger", id: 16 },
+    { name: "Djelfa", id: 17 },
+    { name: "Jijel", id: 18 },
+    { name: "Sétif", id: 19 },
+    { name: "Saïda", id: 20 },
+    { name: "Skikda", id: 21 },
+    { name: "Sidi Bel Abbès", id: 22 },
+    { name: "Annaba", id: 23 },
+    { name: "Guelma", id: 24 },
+    { name: "Constantine", id: 25 },
+    { name: "Médéa", id: 26 },
+    { name: "Mostaganem", id: 27 },
+    { name: "M'Sila", id: 28 },
+    { name: "Mascara", id: 29 },
+    { name: "Ouargla", id: 30 },
+    { name: "Oran", id: 31 },
+    { name: "El Bayadh", id: 32 },
+    { name: "Illizi", id: 33 },
+    { name: "Bordj Bou Arreridj", id: 34 },
+    { name: "Boumerdès", id: 35 },
+    { name: "El Tarf", id: 36 },
+    { name: "Tindouf", id: 37 },
+    { name: "Tissemsilt", id: 38 },
+    { name: "El Oued", id: 39 },
+    { name: "Khenchela", id: 40 },
+    { name: "Souk Ahras", id: 41 },
+    { name: "Tipaza", id: 42 },
+    { name: "Mila", id: 43 },
+    { name: "Aïn Defla", id: 44 },
+    { name: "Naâma", id: 45 },
+    { name: "Aïn Témouchent", id: 46 },
+    { name: "Ghardaïa", id: 47 },
+    { name: "Relizane", id: 48 },
+    { name: "El M'Ghair", id: 49 },
+    { name: "El Meniaa", id: 50 },
+    { name: "Ouled Djellal", id: 51 },
+    { name: "Bordj Baji Mokhtar", id: 52 },
+    { name: "Béni Abbès", id: 53 },
+    { name: "Timimoun", id: 54 },
+    { name: "Touggourt", id: 55 },
+    { name: "Djanet", id: 56 },
+    { name: "In Salah", id: 57 },
+    { name: "In Guezzam", id: 58 },
+  ];
   return (
     <div className="text-white-text ">
       <Navbar />
@@ -325,7 +387,7 @@ function Register() {
         </defs>
       </svg>
       <form
-        className="register__container grid max-w-sm mt-20 ms-[20vw] text-xl justify-items-end text-right "
+        className="register__container grid lg:max-w-sm max-w-xs mt-20 lg:ms-[20vw] ms-4 text-xl justify-items-end text-right "
         onSubmit={handleSubmit}
       >
         <h1 className="text-2xl mb-6">
@@ -350,6 +412,20 @@ function Register() {
             return redirect("/Success");
           }}
         />
+        <h1 className="mb-3">الولاية</h1>
+        {/* array of wilayas of algeria */}
+
+        <select
+          className="register__input text-black max-w-[270px] mb-3 ps-[100px] py-3 rounded-full text-right pe-4 "
+          onChange={(e) => setWilaya(e.target.value)}
+        >
+          <option value="0">الولاية</option>
+          {wilayas.map((wilaya) => (
+            <option key={wilaya.id} value={wilaya.id}>
+              {wilaya.name}
+            </option>
+          ))}
+        </select>
 
         <button className="bg-main-yellow mb-2 text-green-400 text-2xl font-bold py-3 mt-5 px-20 rounded-full ">
           سجل الأن

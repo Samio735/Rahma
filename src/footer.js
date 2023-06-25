@@ -7,7 +7,7 @@ import React from "react";
 const Footer = () => {
   // footer with black bg, two colomuns the right one has contact infromation and the left one social media icons
   return (
-    <div className="bg-black lg:px-20 lg:py-10 grid grid-cols-2 lg:justify-between lg:items-center z-[40] text-white-text ">
+    <div className="bg-black lg:px-20 lg:py-10 grid grid-cols-2 lg:justify-between w-screen overflow-hidden lg:items-center z-[40] text-white-text ">
       <div className="flex-col justify-center lg:justify-start p-10 pb-[85px] lg:pb-[200px]">
         <h1 className="text-xl  font-bold mb-4">
           تابعنا على مواقع التواصل الإجتماعي
