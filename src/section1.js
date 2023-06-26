@@ -6,7 +6,7 @@ import FirstText from "./firstText";
 const Section1 = () => {
   return (
     // div with full width and green background elements centered
-    <div className="w-full lg:pb-[4vw] pb-[10vw] flex justify-center items-center p-5 relative -z-35 lg:justify-end  ">
+    <div className="w-full pb-1 flex justify-end items-center pe-5 relative -z-35 lg:justify-end ">
       {/* div with 2 headings stacked on top of each other and aligned to the right */}
       <FirstText />
       {/* container with text and background svg the svg's width must be the page width and the hieght must be complete */}

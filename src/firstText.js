@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+
+import { createClient } from "@supabase/supabase-js";
 
 const FirstText = () => {
   return (
-    <div className="text-right lg:leading-relaxed max-w-xs lg:max-w-[600px] lg:m-[80px] lg:text-4xl z-10 ">
+    <div className="text-right lg:leading-relaxed max-w-xs lg:max-w-[600px] lg:m-[80px] lg:text-3xl    z-10 ">
       <h1 className="text-4xl lg:text-8xl font-bold mb-3">Rahma - رحمة</h1>
       <h2 className="mb-7  ">
         جسر يجمع بين الذباحين والأسر في عيد الأضحى. إبحث عن ذباح محترف وقريب
