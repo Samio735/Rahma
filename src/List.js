@@ -16,7 +16,7 @@ function List() {
       .from("Rahimouns")
       .select("*")
       .eq("accepted", true);
-    return [];
+    return Rahimouns;
   }
   useEffect(() => {
     getRahimouns().then((Rahimouns) => {
@@ -43,7 +43,10 @@ function List() {
             ></DebahItem>
           ))
         ) : (
-          <div> no rahimons </div>
+          <div className="z-10 max-w-[80vw] text-center">
+            شكرًا لاهتمامك بموقع رحمة! قريبًا ستتوفر قائمة الذباحين المحترفين
+            لخدمتك في العيد الأضحى. نأمل منك التحقق مرة أخرى في وقت لاحق.{" "}
+          </div>
         )}
       </div>
       <Footer></Footer>
